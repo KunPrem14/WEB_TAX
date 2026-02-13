@@ -149,7 +149,11 @@ elif menu == "Import Excel":
     file = st.file_uploader("Choose Excel", type=["xlsx"])
 
     if file:
-        df = pd.read_excel(file, sheet_name="ข้อมูลบุคคล")
+        df = pd.read_excel(
+            file,
+            sheet_name="ข้อมูลบุคคล",
+            engine="openpyxl"
+        )
         st.dataframe(df)
 
         if st.button("Import Data"):
