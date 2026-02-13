@@ -159,8 +159,8 @@ elif menu == "Import Excel":
         if st.button("Import Data"):
             for _, row in df.iterrows():
                 cid = generate_customer_id()
-                income_m = row["Income per month"]
-                expense_m = row["Expense per month"]
+                income_m = row["รายได้ต่อเดือน"]
+                expense_m = row["ค่าใช้จ่ายต่อเดือน"]
 
                 income_y = income_m * 12
                 expense_y = expense_m * 12
